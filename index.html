@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head> 
+    <script src="cryptotools.js"></script>
     <title>Intro Crypto</title>
 </head>
 
@@ -8,11 +9,28 @@
 <h1>Intro to Cryptography Tools</h1>
 
 <h2>Caesar Cipher</h2>
-<label style="display: block;" for="ccinput">Plaintext</label>
 
-<textarea id="ccinput" name="ccinput"
-          rows="5" cols="33"></textarea>
+<div style="display:flex; flex-direction: row">
+
+<div>
+<label style="display: block;" for="ccinput">Plaintext</label>
+<textarea id="ccinput" name="ccinput" rows="5" cols="33"></textarea>
+</div>
+
+<div style="padding: 0px 10px">
+<label style="display: block;" for="ccinput">Parameters</label>
+<p>y = <input id="a" value="1" size=2> x + <input id="b" value="0" size=2></p>
+<button onclick="caesar()" type="button">Substitute</button>
+</div>
+
+<div>
+<label style="display: block;" for="ccinput">Ciphertext</label>
+<textarea id="ccoutput" name="ccoutput" rows="5" cols="33"></textarea>
+</div>
+
+</div>
 
 <h2>Vigenère Cipher</h2>
+
 </body>
 </html>
