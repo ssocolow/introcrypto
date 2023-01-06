@@ -9,11 +9,12 @@
 <h1>Intro to Cryptography Tools</h1>
 
 <h2>Caesar Cipher</h2>
+<p>The substitute button strips whitespace and newlines, also the first parameter can be set to 0.5 to undo a multiply by 2, and the second parameter can be negative to undo a shift.</p>
 
 <div style="display:flex; flex-direction: row">
 
 <div>
-<label style="display: block;" for="ccinput">Plaintext</label>
+<label style="display: block;" for="ccinput">Input</label>
 <textarea id="ccinput" name="ccinput" rows="5" cols="33"></textarea>
 </div>
 
@@ -24,13 +25,41 @@
 </div>
 
 <div>
-<label style="display: block;" for="ccinput">Ciphertext</label>
+<label style="display: block;" for="ccinput">Output</label>
 <textarea id="ccoutput" name="ccoutput" rows="5" cols="33"></textarea>
 </div>
 
 </div>
 
 <h2>Vigenère Cipher</h2>
+<p>The substitute button adds (encrypts) or subtracts (decrypts) the secret word from the input</p>
+
+<div style="display:flex; flex-direction: row">
+
+<div>
+<label style="display: block;" for="vinput">Input</label>
+<textarea id="vinput" name="vinput" rows="5" cols="33"></textarea>
+</div>
+
+<div style="padding: 0px 10px">
+<label style="display: block;" for="vinput">Secret Word</label>
+<p><input id="sw" size=10 style="text-transform:uppercase;">
+<select id="addorsubtract" value="Add">
+<option value="Add">Add</option>
+<option value="Sub">Subtract</option>
+</select>
+</p>
+
+<button onclick="vigenere()" type="button">Substitute</button>
+</div>
+
+<div>
+<label style="display: block;" for="vinput">Output</label>
+<textarea id="voutput" name="voutput" rows="5" cols="33"></textarea>
+</div>
+
+</div>
+
 
 </body>
 </html>

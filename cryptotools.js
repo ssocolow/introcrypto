@@ -27,3 +27,21 @@ function shiftString(s, a, b) {
 function mod(n, m) {
   return ((n % m) + m) % m;
 }
+
+function vigenere() {
+  let pt = document.getElementById("vinput").value.toUpperCase().replace(/\s+/g,"");
+  let b = document.getElementById("addorsubtract").value;
+  let secretword = document.getElementById("sw").value.toUpperCase().replace(/\s+/g,"");
+  let ret = "";
+  let c = 0;
+  for (let i = 0; i < pt.length; i++) {
+    if (b == "Add") {
+      ret += numToChar(mod(charToNum(pt[i]) + charToNum(secretword[c]), 26));
+    }
+    if (b == "Sub") {
+      ret += numToChar(mod(charToNum(pt[i]) - charToNum(secretword[c]), 26));
+    }
+    c = mod(c + 1, secretword.length);
+  }
+  document.getElementById("voutput").value = ret;
+}
