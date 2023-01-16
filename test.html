@@ -9,18 +9,18 @@
 <h1>Intro to Cryptography Tools</h1>
 
 <h2>Caesar Cipher</h2>
-<p>The substitute button strips whitespace and newlines, also the parameter can be negative to undo a shift.</p>
+<p>The substitute button strips whitespace and newlines, also the first parameter can be set to 0.5 to undo a multiply by 2, and the second parameter can be negative to undo a shift.</p>
 
 <div style="display:flex; flex-direction: row">
 
 <div>
 <label style="display: block;" for="ccinput">Input</label>
-<textarea onkeyup="caesar()" id="ccinput" name="ccinput" rows="5" cols="33"></textarea>
+<textarea id="ccinput" name="ccinput" rows="5" cols="33"></textarea>
 </div>
 
 <div style="padding: 0px 10px">
 <label style="display: block;" for="ccinput">Parameters</label>
-<p>y = x + <input id="b" value="0" size=2></p>
+<p>y = <input id="a" value="1" size=2> x + <input id="b" value="0" size=2></p>
 <button onclick="caesar()" type="button">Substitute</button>
 </div>
 
@@ -62,7 +62,7 @@
 
 
 <h2>Hill Cipher</h2>
-<p>Matrix inversion mod 26 (some matricies don't have inverses in Z26)</p>
+<p>Matrix inversion mod 26</p>
 
 <div>
 
@@ -77,8 +77,7 @@
 </div>
 
 <button onclick="invert()" type="button">Invert</button>
-<p>Result</p>
-<p id="hc1">a , b</p><p id="hc2"> c , d</p>
+
 </div>
 <p>Matrix multiply mod 26</p>
 
@@ -93,22 +92,16 @@
 
 </tbody></table>
 <p>x</p>
-<table style="table-layout: auto;" id="m2input" name="m2input">
-<tbody>
-<tr><td><input type="number" id="a2" size="3"></td><td><input type="number" id="b2"size="3"></td></tr>
-<tr><td><input type="number" id="c2"size="3"></td><td><input type="number" id="d2"size="3"></td></tr>
+<input type="number" id="a2" size="3"><input type="number" id="b2" size="3">
+<input type="number" id="c2" size="3"><input type="number" id="d2" size="3">
 
-</tbody></table>
 
 </div>
 
 <button onclick="mult()" type="button">Mulitply</button>
-<div>
-<p id="hcr2">Result</p>
-<p id="hc3">a , b</p><p id="hc4"> c , d</p>
+
 </div>
-</div>
-<br>
+
 <a href="https://github.com/ssocolow/introcrypto">CODE</a>
 
 
